@@ -33,11 +33,11 @@ CREATE TABLE City(
 
 -- Tworzenie tabeli zawierającej informacje o drogach
 CREATE TABLE Routes(
-	ROUTE_ID integer PRIMARY KEY,
+	ROUTE_ID integer PRIMARY KEY IDENTITY(1,1),
 	CITY_FROM VARCHAR(100),
 	CITY_TO VARCHAR(100),
 	LENGTH DECIMAL(5,2));
-
+	
 -- Tworzenie tabeli grafowej zawierającej informacje o dystansie
 CREATE TABLE Distance(length INTEGER) as EDGE;
 
