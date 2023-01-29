@@ -37,7 +37,7 @@ CREATE TABLE Routes(
 	CITY_FROM VARCHAR(100),
 	CITY_TO VARCHAR(100),
 	LENGTH DECIMAL(5,2));
-	
+
 -- Tworzenie tabeli grafowej zawierającej informacje o dystansie
 CREATE TABLE Distance(length INTEGER) as EDGE;
 
@@ -63,3 +63,16 @@ VALUES
 	('Warszawa','mazowieckie'),
 	('Wrocław','dolnośląskie'),
 	('Zielona Góra','lubuskie')
+
+-- Tworzenie krawędzi
+INSERT INTO routes
+	VALUES ((SELECT $node_id FROM City WHERE ID = 1), (SELECT $node_id FROM City WHERE ID = 16), 198), -- Białystok <-> Warszawa
+		   ((SELECT $node_id FROM City WHERE ID = 1), (SELECT $node_id FROM City WHERE ID = 3), 429), -- Białystok <-> Gdańsk
+		   ((SELECT $node_id FROM City WHERE ID = 1), (SELECT $node_id FROM City WHERE ID = 9), 254), -- Białystok <-> Lublin
+		   ((SELECT $node_id FROM City WHERE ID = 1), (SELECT $node_id FROM City WHERE ID = 10), 243), -- Białystok <-> Olsztyn
+		   ((SELECT $node_id FROM City WHERE ID = 2), (SELECT $node_id FROM City WHERE ID = 10), 212), -- Bydgoszcz <-> Olsztyn
+		   ((SELECT $node_id FROM City WHERE ID = 2), (SELECT $node_id FROM City WHERE ID = 3), 167), -- Bydgoszcz <-> Gdańsk
+		   ((SELECT $node_id FROM City WHERE ID = 2), (SELECT $node_id FROM City WHERE ID = 4), 212), -- Bydgoszcz <-> Gorzów Wielkopolski
+		   ((SELECT $node_id FROM City WHERE ID = 2), (SELECT $node_id FROM City WHERE ID = 15), 46), -- Bydgoszcz <-> Toruń
+		   ((SELECT $node_id FROM City WHERE ID = 2), (SELECT $node_id FROM City WHERE ID = 12), 140), -- Bydgoszcz <-> Poznań
+		   ((SELECT $node_id FROM City WHERE ID = 2), (SELECT $node_id FROM City WHERE ID = 14), 259), -- Bydgoszcz <-> Szczecin
