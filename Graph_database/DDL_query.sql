@@ -324,3 +324,18 @@ FROM
 	AND city.name = 'Olsztyn'
 ) AS a
 WHERE a.LAST_NODE = 'Katowice'
+
+-------------------------------------
+--Miasto z największą ilością połączeń
+-------------------------------------
+
+SELECT 
+	name, 
+	COUNT(*) AS connections
+FROM 
+	routes
+JOIN 
+	city 
+	AS node ON routes.$from_id = $node_id
+GROUP BY name
+ORDER BY connections DESC;
