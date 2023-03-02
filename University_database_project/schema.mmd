@@ -1,0 +1,81 @@
+```mermaid
+erDiagram
+    STUDENT {
+        id int PK
+        first_name varchar(50)
+        last_name varchar(50)
+        birth_date date
+        email varchar(100)
+        address varchar(200)
+        phone_number varchar(20)
+        photo blob
+        registration_date date
+    }
+    TEACHER {
+        id int PK
+        first_name varchar(50)
+        last_name varchar(50)
+        email varchar(100)
+        address varchar(200)
+        phone_number varchar(20)
+        photo blob
+        hire_date date
+        degree varchar(50)
+        rank varchar(50)
+    }
+    SUBJECT {
+        id int PK
+        name varchar(100)
+        description varchar(500)
+        credits int
+    }
+    COURSE {
+        id int PK
+        subject_id int FK
+        teacher_id int FK
+        room varchar(50)
+        start_time time
+        end_time time
+        day_of_week varchar(10)
+    }
+    MAJOR {
+        id int PK
+        name varchar(100)
+        description varchar(500)
+    }
+    STUDENT_MAJOR {
+        student_id int FK
+        major_id int FK
+        admission_date date
+        graduation_date date
+    }
+    EXAM {
+        id int PK
+        course_id int FK
+        teacher_id int FK
+        exam_date date
+        exam_type varchar(50)
+    }
+    GRADE {
+        id int PK
+        exam_id int FK
+        student_id int FK
+        grade decimal
+    }
+    STUDENT_COURSE {
+        student_id int FK
+        course_id int FK
+        registration_date date
+        withdrawal_date date
+    }
+
+    STUDENT }|--|| STUDENT_MAJOR : has
+    MAJOR }|--|| STUDENT_MAJOR : includes
+    TEACHER }|--|| COURSE : teaches
+    SUBJECT }|--|| COURSE : has
+    COURSE }|--|| STUDENT_COURSE : has
+    COURSE }|--|| EXAM : has
+    TEACHER }|--|| EXAM : supervises
+    EXAM }|--|| GRADE : has
+    STUDENT }|--|| GRADE : receives
+```
