@@ -2,46 +2,46 @@
 erDiagram
     STUDENT {
         id int PK
-        first_name varchar(50)
-        last_name varchar(50)
+        first_name varchar
+        last_name varchar
         birth_date date
-        email varchar(100)
-        address varchar(200)
-        phone_number varchar(20)
+        email varchar
+        address varchar
+        phone_number varchar
         photo blob
         registration_date date
     }
     TEACHER {
         id int PK
-        first_name varchar(50)
-        last_name varchar(50)
-        email varchar(100)
-        address varchar(200)
-        phone_number varchar(20)
+        first_name varchar
+        last_name varchar
+        email varchar
+        address varchar
+        phone_number varchar
         photo blob
         hire_date date
-        degree varchar(50)
-        rank varchar(50)
+        degree varchar
+        rank varchar
     }
     SUBJECT {
         id int PK
-        name varchar(100)
-        description varchar(500)
+        name varchar
+        description varchar
         credits int
     }
     COURSE {
         id int PK
         subject_id int FK
         teacher_id int FK
-        room varchar(50)
+        room varchar
         start_time time
         end_time time
-        day_of_week varchar(10)
+        day_of_week varchar
     }
     MAJOR {
         id int PK
-        name varchar(100)
-        description varchar(500)
+        name varchar
+        description varchar
     }
     STUDENT_MAJOR {
         student_id int FK
@@ -54,7 +54,7 @@ erDiagram
         course_id int FK
         teacher_id int FK
         exam_date date
-        exam_type varchar(50)
+        exam_type varchar
     }
     GRADE {
         id int PK
