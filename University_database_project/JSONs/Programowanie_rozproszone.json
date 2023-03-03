@@ -1,0 +1,82 @@
+[
+    {
+       "id_studenta":1,
+       "id_kursu":3,
+       "nazwa_przedmiotu":"Programowanie rozproszone",
+       "semestr":"letni",
+       "ocena":4.0,
+       "rok":2022
+    },
+    {
+       "id_studenta":2,
+       "id_kursu":3,
+       "nazwa_przedmiotu":"Programowanie rozproszone",
+       "semestr":"letni",
+       "ocena":3.5,
+       "rok":2022
+    },
+    {
+       "id_studenta":3,
+       "id_kursu":3,
+       "nazwa_przedmiotu":"Programowanie rozproszone",
+       "semestr":"letni",
+       "ocena":4.5,
+       "rok":2022
+    },
+    {
+       "id_studenta":4,
+       "id_kursu":3,
+       "nazwa_przedmiotu":"Programowanie rozproszone",
+       "semestr":"letni",
+       "ocena":3.0,
+       "rok":2022
+    },
+    {
+       "id_studenta":5,
+       "id_kursu":3,
+       "nazwa_przedmiotu":"Programowanie rozproszone",
+       "semestr":"letni",
+       "ocena":5.0,
+       "rok":2022
+    },
+    {
+       "id_studenta":6,
+       "id_kursu":3,
+       "nazwa_przedmiotu":"Programowanie rozproszone",
+       "semestr":"letni",
+       "ocena":4.0,
+       "rok":2022
+    },
+    {
+       "id_studenta":7,
+       "id_kursu":3,
+       "nazwa_przedmiotu":"Programowanie rozproszone",
+       "semestr":"letni",
+       "ocena":3.5,
+       "rok":2022
+    },
+    {
+       "id_studenta":8,
+       "id_kursu":3,
+       "nazwa_przedmiotu":"Programowanie rozproszone",
+       "semestr":"letni",
+       "ocena":4.5,
+       "rok":2022
+    },
+    {
+       "id_studenta":9,
+       "id_kursu":3,
+       "nazwa_przedmiotu":"Programowanie rozproszone",
+       "semestr":"letni",
+       "ocena":3.0,
+       "rok":2022
+    },
+    {
+       "id_studenta":10,
+       "id_kursu":3,
+       "nazwa_przedmiotu":"Programowanie rozproszone",
+       "semestr":"letni",
+       "ocena":4.0,
+       "rok":2022
+    }
+ ]
