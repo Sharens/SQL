@@ -67,7 +67,6 @@ erDiagram
         id_przedmiotu INT PK
         nazwa_przedmiotu VARCHAR
         liczba_ects INT
-        poziom_trudnosci VARCHAR
     }
     GRUPY_ZAJECIOWE {
         id_grupy INT PK
@@ -86,22 +85,22 @@ erDiagram
         godzina_rozpoczecia TIME
         godzina_zakonczenia TIME
     }
-    STUDENCI }|..|| OCENY: "zawiera"
-    KURSY }|..|| OCENY: "zawiera"
-    STUDENCI }|--|| ZAPISY: "zawiera"
-    KURSY }|--|| ZAPISY: "zawiera"
-    GRUPY_ZAJECIOWE }|--|| ZAPISY: "zawiera"
-    KURSY }|--|{ GRUPY_ZAJECIOWE: "zawiera"
-    KURSY }|--|{ PLAN_ZAJEC: "zawiera"
-    SALE }|--|{ PLAN_ZAJEC: "zawiera"
-    NAUCZYCIELE }|--|{ PLAN_ZAJEC: "zawiera"
-    KURSY }|--|| PRZEDMIOTY: "zawiera"
-    WYDZIALY }|--|| STUDENCI: "zawiera"
-    WYDZIALY }|--|| KURSY: "zawiera"
-    WYDZIALY }|--|| PRZEDMIOTY: "zawiera"
-    WYDZIALY }|--|| NAUCZYCIELE: "zawiera"
-    WYDZIALY }|--|| GRUPY_ZAJECIOWE: "zawiera"
-    WYDZIALY }|--|| SALE: "zawiera"
+    STUDENCI }|..|| OCENY: "dostają"
+    KURSY }|..|| OCENY: "wchodzą w skład"
+    STUDENCI }|--|| ZAPISY: "dotyczą"
+    KURSY }|--|| ZAPISY: "dotyczą"
+    GRUPY_ZAJECIOWE }|--|| ZAPISY: "tworzą"
+    KURSY }|--|{ GRUPY_ZAJECIOWE: "uczęszczają"
+    KURSY }|--|{ PLAN_ZAJEC: "określa"
+    SALE }|--|{ PLAN_ZAJEC: "określa"
+    NAUCZYCIELE }|--|{ PLAN_ZAJEC: "określa"
+    KURSY }|--|| PRZEDMIOTY: "wchodzą w skład"
+    WYDZIALY }|--|| STUDENCI: "wchodzi w skład"
+    WYDZIALY }|--|| KURSY: "wchodzi w skład"
+    WYDZIALY }|--|| PRZEDMIOTY: "wchodzi w skład"
+    WYDZIALY }|--|| NAUCZYCIELE: "wchodzi w skład"
+    WYDZIALY }|--|| GRUPY_ZAJECIOWE: "wchodzi w skład"
+    WYDZIALY }|--|| SALE: "wchodzi w skład"
 ```
 Powyższy diagram ER przedstawia relacje między tabelami obecnymi w systemie zarządzania uniwersytetem:
 
